@@ -44,6 +44,9 @@ def main():
             modify_graph()
         #########################
 
+        elif current_use == "quit":
+            return
+
         # # https://pixe.la/v1/users/lhgs/graphs/d0loc0graph.html
 
 
