@@ -15,39 +15,51 @@ RESPONSE_SUCCESS = '{"message":"Success.","isSuccess":true}'
 
 def main():
     if __name__ == "__main__":
-        current_use = input(
-            "Options:\n\tcreate_user\n\tcreate_graph\n\tmodify_graph\n\tcreate_pixel_today\n\taddto_pixel_today\n\tquit\n\t\t"
-        )
+        uses_list = [
+            "create_user",
+            "create_graph",
+            "modify_graph",
+            "create_pixel_today",
+            "addto_pixel_today",
+            "quit",
+        ]
+
+        print("Options:")
+        for use in uses_list:
+            print(f"\t{use} [{uses_list.index(use)}]")
+        current_use_index = int(input("\t\t"))
+        current_use = uses_list[current_use_index]
+
         # Generate Pixela user #
-        if current_use == "create_user":
+        if current_use == uses_list[0]:
             create_user()
             # https://pixe.la/@lhgs
         #########################
 
         # Generate a graph
-        elif current_use == "create_graph":
+        elif current_use == uses_list[1]:
             create_graph()
             # https://pixe.la/v1/users/lhgs/graphs/d0loc0graph.html
         #########################
 
+        # Update Graph
+        elif current_use == uses_list[2]:
+            modify_graph()
+        #########################
+
         # Generate a day pixel
-        elif current_use == "create_pixel_today":
+        elif current_use == uses_list[3]:
             quantity = input("how many for the pixel\n\t")
             create_pixel(quantity)
         #########################
 
         # Add to a day pixel
-        elif current_use == "addto_pixel_today":
+        elif current_use == uses_list[4]:
             quantity = input("how many to add to the pixel\n\t")
             add_to_pixel(quantity)
         #########################
 
-        # Update Graph
-        elif current_use == "modify_graph":
-            modify_graph()
-        #########################
-
-        elif current_use == "quit":
+        elif current_use == uses_list[5]:
             return
 
         print("https://pixe.la/v1/users/lhgs/graphs/d0loc0graph.html")
