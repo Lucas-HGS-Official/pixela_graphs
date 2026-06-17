@@ -24,9 +24,9 @@ def main():
             "quit",
         ]
 
-        print("Options:")
+        print("Options:\n")
         for use in uses_list:
-            print(f"\t{use} [{uses_list.index(use)}]")
+            print(f"{use} [{uses_list.index(use)}]")
         current_use_index = int(input("\t\t"))
         current_use = uses_list[current_use_index]
 
@@ -60,6 +60,8 @@ def main():
         #########################
 
         elif current_use == uses_list[5]:
+            return
+        else:
             return
 
         print("https://pixe.la/v1/users/lhgs/graphs/d0loc0graph.html")
