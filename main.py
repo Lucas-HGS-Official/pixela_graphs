@@ -1,7 +1,6 @@
 import pixela_graphs
 import pixela_pixels
 import pixela_users
-from defines import *
 
 
 def main():

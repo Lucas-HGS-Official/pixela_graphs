@@ -2,7 +2,7 @@ from datetime import datetime
 
 import requests
 
-from defines import *
+from defines import PIXELA_PIXEL_ENDPOINT, PIXELA_TOKEN, RESPONSE_SUCCESS
 
 
 def create_pixel(quantity: str):

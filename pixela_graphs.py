@@ -1,6 +1,6 @@
 import requests
 
-from defines import *
+from defines import PIXELA_GRAPH_ENDPOINT, PIXELA_GRAPHID, PIXELA_TOKEN, RESPONSE_SUCCESS
 
 
 def create_graph():
