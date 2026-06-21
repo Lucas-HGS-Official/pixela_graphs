@@ -51,17 +51,19 @@ def chose_date():
 
 
 def chose_pixel_action():
-    actions_list = ["Create a pixel", "Add to a pixel", "Quit program"]
-    for acts in actions_list:
+    actions_list = ["", "Create a pixel", "Add to a pixel", "Quit program"]
+    for acts in actions_list[1:]:
         print(f"{acts} [{actions_list.index(acts)}]")
     user_input = int(input("\t"))
 
-    if user_input == 0:
+    if user_input == 1:
         quantity = input("How many for the pixel:\n\t")
         create_pixel(quantity, chose_date())
 
-    elif user_input == 1:
+    elif user_input == 2:
         quantity = input("How many to add to the pixel\n\t")
         add_to_pixel(quantity, chose_date())
     elif user_input == 3:
+        return
+    else:
         return
