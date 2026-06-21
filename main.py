@@ -38,15 +38,8 @@ def main():
         #########################
 
         # Generate a day pixel
-        elif current_use == uses_list[3]:
-            quantity = input("how many for the pixel:\n\t")
-            pixela_pixels.create_pixel(quantity)
-        #########################
-
-        # Add to a day pixel
-        elif current_use == uses_list[4]:
-            quantity = input("how many to add to the pixel\n\t")
-            pixela_pixels.add_to_pixel(quantity)
+        elif current_use == uses_list[3] or current_use == uses_list[4]:
+            pixela_pixels.chose_pixel_action()
         #########################
 
         elif current_use == uses_list[5]:
