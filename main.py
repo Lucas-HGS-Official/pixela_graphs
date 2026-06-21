@@ -22,7 +22,7 @@ def main():
 
         # Generate Pixela user #
         if current_use == uses_list[0]:
-            pixela_users.create_user()
+            pixela_users.chose_user_acttion()
             # https://pixe.la/@lhgs
         #########################
 
