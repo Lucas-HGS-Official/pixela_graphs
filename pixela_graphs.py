@@ -21,7 +21,7 @@ def create_graph():
         )
 
         print(pixela_response.text)
-        response = pixela_response.text
+        response = pixela_response.json()["message"]
 
 
 def modify_graph():
@@ -35,4 +35,21 @@ def modify_graph():
             headers=headers,
         )
         print(pixela_response.text)
-        response = pixela_response.text
+        response = pixela_response.json()["message"]
+
+
+def chose_graph_action():
+    actions_list = ["", "Create a graph", "Modify a graph", "Quit program"]
+    for acts in actions_list[1:]:
+        print(f"{acts} [{actions_list.index(acts)}]")
+    user_input = int(input("\t"))
+
+    if user_input == 1:
+        create_graph()
+
+    elif user_input == 2:
+        modify_graph()
+    elif user_input == 3:
+        return
+    else:
+        return
